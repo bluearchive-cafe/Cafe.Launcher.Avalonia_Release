@@ -2,8 +2,11 @@
 
 > Blue Archive 日服桌面启动器 —— 原生体验，实用增强。
 
-[![Version](https://img.shields.io/badge/version-1.0.0--beta.6-orange)][releases]
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)](#系统要求)
+[![Version](https://img.shields.io/badge/Version-v1.0.0--beta.6-blue?style=flat-square)][releases]
+[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white)](#系统要求)
+![Framework](https://img.shields.io/badge/Framework-.NET%2010-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+
+[官网](https://bluearchive.cafe/) | [**下载**](#下载与安装) | [**文档**](https://docs.bluearchive.cafe/cafe-launcher/)
 
 Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archive 日服第三方桌面启动器。基于 .NET 10 + Avalonia 12 构建，原生 Windows 体验。在完整兼容官方启动器游戏数据格式的同时，新增了 CDN 切换、下载可靠性增强、主题定制、崩溃恢复等一系列实用功能。
 
@@ -207,17 +210,6 @@ Cafe Launcher 不修改游戏客户端、不注入代码，仅提供下载和启
 "Cafe Launcher" 是由「蔚蓝咖啡厅」开发组开发的第三方 Blue Archive 启动器，与游戏《ブルーアーカイブ》（中文名「蔚蓝档案」）及相关公司并无官方关联。
 
 本软件仅供学习交流使用。使用本软件产生的任何后果由用户自行承担。
-
----
-
-## 相关链接
-
-| 链接 | 地址 |
-|------|------|
-| 下载发布 | [GitHub Releases][releases] |
-| 反馈问题 | [GitHub Issues][issues] |
-| bluearchive.cafe | [bluearchive.cafe](https://bluearchive.cafe/) |
-| 蔚蓝档案官网 | [bluearchive.jp](https://bluearchive.jp/) |
 
 [releases]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases
 [issues]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/issues
