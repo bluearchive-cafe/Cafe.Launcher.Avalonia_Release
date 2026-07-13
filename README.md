@@ -2,7 +2,7 @@
 
 > Blue Archive 日服桌面启动器 —— 原生体验，实用增强。
 
-[![Version](https://img.shields.io/badge/Version-v1.0.0--beta.6-blue?style=flat-square)][releases]
+[![Version](https://img.shields.io/badge/Version-v1.0.0--beta.7-blue?style=flat-square)][releases]
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white)](#系统要求)
 ![Framework](https://img.shields.io/badge/Framework-.NET%2010-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 
