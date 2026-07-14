@@ -40,17 +40,17 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 - **主题模式** — 浅色 / 深色 / 跟随系统
 - **主题色** — 四种模式：默认蓝 (`#2E7DF6`) / 跟随系统强调色 / 壁纸取色（自动提取调色板） / 自定义颜色
 - **背景定制** — 内置默认壁纸 / 远程背景 / 自定义图片；支持填充 / 适应 / 裁剪三种缩放
-- **动画效果** — 可开关的界面动效
+- **动态效果** — 支持跟随系统、完整动态效果和减少动态效果
 - 无边框窗口 + 自定义标题栏，最小化到系统托盘
 
 ### 多语言
 
 | 语言 | 覆盖 |
 |------|------|
-| English | 345 条 |
-| 简体中文 | 345 条 |
-| 繁體中文 | 345 条 |
-| 日本語 | 345 条 |
+| English | 完整 |
+| 简体中文 | 完整 |
+| 繁體中文 | 完整 |
+| 日本語 | 完整 |
 
 默认跟随系统语言，也可手动切换。
 
@@ -118,7 +118,7 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 1. 解压到任意目录
 2. 运行 `Cafe.Launcher.Avalonia.exe`
 
-便携版不创建快捷方式，用户数据保存在启动器同目录下。
+便携版不创建快捷方式。设置、日志和下载状态仍保存在 `%LOCALAPPDATA%\Cafe Launcher\`。
 
 ### 更新
 
@@ -158,11 +158,11 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 |------|------|
 | `settings.json` | 所有设置项（语言、主题、CDN、速度限制等 20+ 项） |
 | `unified.log` | 统一运行日志（5 MB × 3 份滚动保留） |
-| `game-launcher-config.json` | 游戏启动配置，与官方启动器共享 |
-| `manifest.json` | 游戏文件清单 + 完整性校验值，与官方启动器共享 |
 | `download_state.json` | 下载进度快照，用于断点续传 |
 | `shown_notices.json` | 已读公告 ID 列表 |
 | `clickCode` | 安装来源追踪标识 |
+
+`game-launcher-config.json` 和 `manifest.json` 位于设置中指定的游戏目录，用于与官方启动器共享游戏状态。
 
 ---
 
@@ -212,6 +212,8 @@ Cafe Launcher 不修改游戏客户端、不注入代码，仅提供下载和启
 "Cafe Launcher" 是由「蔚蓝咖啡厅」开发组开发的第三方 Blue Archive 启动器，与游戏《ブルーアーカイブ》（中文名「蔚蓝档案」）及相关公司并无官方关联。
 
 本软件仅供学习交流使用。使用本软件产生的任何后果由用户自行承担。
+
+Cafe Launcher 为闭源项目，源代码不向公众发布。
 
 [releases]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases
 [issues]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/issues
