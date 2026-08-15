@@ -10,6 +10,8 @@
 
 Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archive 日服第三方桌面启动器。基于 .NET 10 + Avalonia 12 构建，原生 Windows 体验。在完整兼容官方启动器游戏数据格式的同时，新增了 CDN 切换、下载可靠性增强、主题定制、崩溃恢复等一系列实用功能。
 
+本项目基于 **Blue Archive 官方 PC 启动器** 的逻辑构建，并在此基础上添加了更多定制化功能，专注于提供原生的桌面启动体验。
+
 ![屏幕截图](./assets/images/screenshot.png "屏幕截图")
 
 > [!NOTE]
