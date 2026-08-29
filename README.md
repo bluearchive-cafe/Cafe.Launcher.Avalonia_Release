@@ -3,15 +3,15 @@
 > Blue Archive 日服桌面启动器 —— 原生体验，实用增强。
 
 [![Version](https://img.shields.io/github/v/tag/bluearchive-cafe/Cafe.Launcher.Avalonia_Release?sort=semver&style=flat-square&label=Version)][releases]
-[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square&logo=windows&logoColor=white)](#系统要求)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-0078D6?style=flat-square)](#系统要求)
 ![Framework](https://img.shields.io/badge/Framework-.NET%2010-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 
-[官网](https://bluearchive.cafe/) | [**下载**](#下载与安装) | [**文档**](https://docs.bluearchive.cafe/cafe-launcher/)
+[官网](https://bluearchive.cafe/) | [**下载**](#下载与安装) | [**文档**](https://docs.bluearchive.cafe/cafe-launcher/) | [**源代码**](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia)
 
 > [!IMPORTANT]
-> **本仓库即将废弃**。将会开放源代码，后续更新将在主仓库进行。
+> 本仓库用于托管 Release 与可下载文件；源代码、开发进度和问题反馈请前往 [Cafe.Launcher.Avalonia](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia)。
 
-Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archive 日服第三方桌面启动器。基于 .NET 10 + Avalonia 12 构建，原生 Windows 体验。在完整兼容官方启动器游戏数据格式的同时，新增了 CDN 切换、下载可靠性增强、主题定制、崩溃恢复等一系列实用功能。
+Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archive 日服第三方桌面启动器。基于 .NET 10 + Avalonia 12 构建，Windows 为正式支持平台，并提供实验性的 macOS 与 Linux 构建。在完整兼容官方启动器游戏数据格式的同时，新增了 CDN 切换、下载可靠性增强、主题定制、崩溃恢复等一系列实用功能。
 
 本项目基于 **Blue Archive 官方 PC 启动器** 的逻辑构建，并在此基础上添加了更多定制化功能，专注于提供原生的桌面启动体验。
 
@@ -80,7 +80,7 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 - 默认在启动完成后后台检查更新，也可在设置中关闭
 - **稳定版** / **测试版** 双通道；预发布构建默认使用测试版通道
 - 优先通过 Cafe 服务查询，失败时回退 GitHub Releases API
-- 更新对话框展示发布文件及大小，选择安装包或便携包后使用浏览器下载
+- 更新对话框展示 Release 文件及大小，选择与当前平台匹配的文件后使用浏览器下载
 
 ### 诊断与恢复
 
@@ -92,6 +92,7 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 ### 其他细节
 
 - 可与官方 Yostar 启动器共存，共享游戏文件（`manifest.json` 格式二进制兼容）
+- 游戏操作菜单支持主动检查更新、打开游戏目录，以及在 Windows 上添加桌面快捷方式
 - Toast 通知提示，操作结果即时反馈
 - 无遥测上报，所有诊断数据保留在本地
 
@@ -101,13 +102,13 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 
 | 项目 | 要求 |
 |------|------|
-| 操作系统 | Windows 10 1809+ / Windows 11 |
-| 架构 | x64 |
+| 操作系统 | Windows 10 1809+ / Windows 11；macOS 与 Linux 为实验性支持 |
+| 架构 | Windows x64 / macOS arm64 / Linux x64 |
 | 运行库 | 无需额外安装（自包含发布，打包 .NET Runtime） |
 | 磁盘空间 | 启动器占用以当前 Release 资产为准；游戏所需空间以向导和设置页检测结果为准 |
 | 网络 | 需要互联网连接（下载游戏 + API 通信） |
 
-> **跨平台状态**：当前仅提供 Windows 版本。Linux / macOS 尚未正式支持。
+> **跨平台状态**：Windows 为正式支持平台。macOS arm64 与 Linux x64 自 `v1.1.0-beta.1` 起提供实验性构建，尚未完成针对性适配与充分测试，可能存在兼容性或功能异常。
 
 ---
 
@@ -123,14 +124,17 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 
 安装包会自动创建桌面快捷方式和开始菜单条目。后续版本可直接覆盖安装升级。
 
-### 方式二：便携版
+### 方式二：自包含归档
 
-从 [Releases][releases] 下载最新的 `Cafe.Launcher.Avalonia_v<版本号>_standalone.zip`：
+从 [Releases][releases] 下载与系统匹配的文件：
 
-1. 解压到任意目录
-2. 运行 `Cafe.Launcher.Avalonia.exe`
+| 平台 | 文件 |
+|------|------|
+| Windows x64 | `Cafe.Launcher.Avalonia_v<版本号>_win-x64.zip` |
+| macOS Apple Silicon | `Cafe.Launcher.Avalonia_v<版本号>_osx-arm64.zip`（内含 `Cafe Launcher.app`） |
+| Linux x64 | `Cafe.Launcher.Avalonia_v<版本号>_linux-x64.AppImage` 或 `Cafe.Launcher.Avalonia_v<版本号>_linux-x64.tar.gz` |
 
-便携版不创建快捷方式。设置、日志和下载状态仍保存在 `%LOCALAPPDATA%\Cafe Launcher\`。
+解压归档后运行对应平台的启动程序。Windows ZIP 版不创建快捷方式，设置、日志和下载状态仍保存在 `%LOCALAPPDATA%\Cafe Launcher\`。旧版本可能继续使用 `_standalone.zip` 文件名，请以具体 Release 的资产列表为准。
 
 ### 更新
 
@@ -156,10 +160,10 @@ Cafe Launcher 是由 **蔚蓝咖啡厅 (BlueArchive.Cafe)** 开发的 Blue Archi
 
 | 分类 | 设置项 |
 |------|--------|
-| 常规 | 语言（auto / en / zh-Hans / zh-Hant / ja）、关闭行为（最小化到托盘 / 直接退出）、动画效果、启动时检查更新 |
+| 常规 | 语言（auto / en / zh-Hans / zh-Hant / ja）、关闭行为（最小化到托盘 / 直接退出）、动画效果、记住窗口位置和大小、启动时检查更新 |
 | 游戏 | 游戏路径、启动验证模式（本地清单 / 远程清单 / 跳过）、修复、卸载 |
 | 下载与网络 | 代理（自动 / 直连 / 系统代理）、下载源（官方 CDN / Cafe CDN）、速度限制、更新通道（stable / beta） |
-| 外观 | 主题（浅色 / 深色 / 跟随系统）、主题色（默认 / 系统 / 壁纸 / 自定义）、背景（内置 / 远程 / 自定义）、状态面板（隐藏 / 简略 / 详细）、远程内容卡片 |
+| 外观 | 主题（浅色 / 深色 / 跟随系统）、主题色（默认 / 系统 / 壁纸 / 自定义）、取色算法、M3 配色变体、中性色策略、背景（内置 / 远程 / 自定义）、状态面板（隐藏 / 简略）、远程内容卡片 |
 | 高级 | 日志级别、查看日志、导出日志、打开数据目录 |
 | 关于 | 版本与构建信息、检查更新、官方网站、GitHub、帮助文档、免责声明 |
 
@@ -215,7 +219,7 @@ Cafe Launcher 不修改游戏客户端、不注入代码，仅提供下载和启
 
 1. 重启启动器，崩溃恢复功能会自动检测并提供恢复选项
 2. 设置 → 高级 → 日志级别调至 `Debug` 或 `Verbose`，复现问题后导出日志
-3. 到 [Issues][issues] 提交反馈，附上导出的日志 ZIP
+3. 到主源码仓库的 [Issues][issues] 提交反馈，附上导出的日志 ZIP
 
 ### 如何彻底卸载？
 
@@ -232,7 +236,7 @@ Cafe Launcher 不修改游戏客户端、不注入代码，仅提供下载和启
 
 本软件仅供学习交流使用。使用本软件产生的任何后果由用户自行承担。
 
-Cafe Launcher 为闭源项目，源代码不向公众发布。
+Cafe Launcher 源代码已在 [bluearchive-cafe/Cafe.Launcher.Avalonia](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia) 公开，并采用 MIT License。本仓库仅负责 Release 分发。
 
 [releases]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases
-[issues]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/issues
+[issues]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/issues
