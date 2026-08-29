@@ -238,5 +238,8 @@ Cafe Launcher 不修改游戏客户端、不注入代码，仅提供下载和启
 
 Cafe Launcher 源代码已在 [bluearchive-cafe/Cafe.Launcher.Avalonia](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia) 公开，并采用 MIT License。本仓库仅负责 Release 分发。
 
+- [隐私政策](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/blob/main/PRIVACY.md)
+- [第三方许可](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/blob/main/THIRD-PARTY-NOTICES.md)
+
 [releases]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases
 [issues]: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/issues
