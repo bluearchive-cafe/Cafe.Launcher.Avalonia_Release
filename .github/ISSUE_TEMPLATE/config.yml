@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 报告 Cafe Launcher 问题
+    url: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/issues/new/choose
+    about: Bug、下载资产问题、兼容问题和功能建议统一在源码仓库跟踪
+  - name: Cafe Launcher 使用文档
+    url: https://docs.bluearchive.cafe/cafe-launcher/
+    about: 查看安装、设置、游戏操作和常见问题说明
+  - name: 下载最新版本
+    url: https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases
+    about: 按平台选择 Windows、macOS 或 Linux 发行文件
