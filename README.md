@@ -2,15 +2,18 @@
 
 本仓库只用于托管 Cafe Launcher 的版本记录和可下载文件。源代码、开发说明和问题跟踪位于 [Cafe.Launcher.Avalonia](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia)，完整使用说明位于[文档站](https://docs.bluearchive.cafe/cafe-launcher/)。
 
-[![Latest release](https://img.shields.io/github/v/release/bluearchive-cafe/Cafe.Launcher.Avalonia_Release?include_prereleases&label=latest)](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-2E7DF6)](#选择下载文件)
+[![正式版 Release](https://img.shields.io/github/v/release/bluearchive-cafe/Cafe.Launcher.Avalonia_Release?style=flat-square&color=%233fb950&label=%E6%AD%A3%E5%BC%8F%E7%89%88)](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases/latest)
+[![测试版 Release](https://img.shields.io/github/v/release/bluearchive-cafe/Cafe.Launcher.Avalonia_Release?include_prereleases&style=flat-square&label=%E6%B5%8B%E8%AF%95%E7%89%88)](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases)
+[![下载量](https://img.shields.io/github/downloads/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/total?style=flat-square&label=%E4%B8%8B%E8%BD%BD%E9%87%8F&logo=github)](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases/latest)<br/>
+[![平台](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-2E7DF6?style=flat-square)](#选择下载文件)
+[![License](https://img.shields.io/github/license/bluearchive-cafe/Cafe.Launcher.Avalonia_Release?style=flat-square)](./LICENSE)
 
 [下载最新版本](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases) · [安装文档](https://docs.bluearchive.cafe/cafe-launcher/installation) · [常见问题](https://docs.bluearchive.cafe/cafe-launcher/faq) · [提交问题](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/issues)
 
 > [!IMPORTANT]
 > Cafe Launcher 是面向 Blue Archive 日服的社区第三方启动器，与 Nexon、Nexon Games、Yostar 及 Blue Archive 官方无隶属或合作关系。请只从本仓库或源码仓库的 Releases 页面下载安装包。
 
-![Cafe Launcher 主界面](./assets/images/screenshot.png)
+![Cafe Launcher 主视觉](./assets/images/key-visual.webp)
 
 ## 选择下载文件
 
@@ -75,6 +78,10 @@ Linux 桌面仍需系统提供 Avalonia 所依赖的图形、字体和基础运�
 详细说明见[安装与首次使用](https://docs.bluearchive.cafe/cafe-launcher/installation)和[游戏操作](https://docs.bluearchive.cafe/cafe-launcher/operations)。
 
 ## 界面预览
+
+主界面在识别到已有游戏后直接给出启动入口，底部状态栏汇总版本、启动校验与网络状态。
+
+![Cafe Launcher 主界面](./assets/images/screenshot.png)
 
 设置面板把全部选项分为常规、游戏、下载与网络、外观、高级和关于六类。
 
