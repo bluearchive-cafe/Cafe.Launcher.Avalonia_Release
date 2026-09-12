@@ -35,7 +35,7 @@
 
 1. 下载 `setup.exe`。
 2. 退出正在运行的 Cafe Launcher。
-3. 运行安装程序并按向导完成安装。
+3. 运行安装程序，先选择安装语言，再按向导确认安装目录与附加任务。
 4. 从开始菜单或桌面快捷方式启动 Cafe Launcher。
 
 安装版默认写入 `C:\Program Files\Cafe Launcher`，按所有用户范围安装，因此安装、升级和卸载需要管理员权限。覆盖安装新版本时，游戏文件和用户设置不会被删除。
@@ -65,18 +65,34 @@ Linux 桌面仍需系统提供 Avalonia 所依赖的图形、字体和基础运�
 首次启动会依次引导你选择：
 
 1. 界面语言
-2. 游戏下载源
-3. 游戏安装目录
-4. 网络代理模式
-5. 设置复核
+2. 下载源
+3. 游戏安装路径
+4. 代理
+5. 确认您的设置
 
-完成后，主界面会识别已有游戏或显示“安装”。如果电脑中已经存在官方启动器下载的游戏，请选择同一个 `BlueArchive_JP` 游戏目录，以避免重复下载。
+在“确认您的设置”一步可以单独“修改”前四项，确认后点击“完成”应用。完成后，主界面会识别已有游戏或显示“安装游戏”。如果电脑中已经存在官方启动器下载的游戏，请选择同一个 `BlueArchive_JP` 游戏目录，以避免重复下载。
 
 详细说明见[安装与首次使用](https://docs.bluearchive.cafe/cafe-launcher/installation)和[游戏操作](https://docs.bluearchive.cafe/cafe-launcher/operations)。
 
+## 界面预览
+
+设置面板把全部选项分为常规、游戏、下载与网络、外观、高级和关于六类。
+
+![Cafe Launcher 设置](./assets/images/settings.webp)
+
+使用 Cafe 下载源时，可以用资源面板按 UID 管理游戏文本、主线中配和图像视频三类汉化资源。
+
+![资源面板](./assets/images/resource-panel.webp)
+
+Windows 安装程序支持 English、简体中文和日本語，可自定义安装目录与桌面快捷方式。
+
+![Windows 安装向导](./assets/images/installer.webp)
+
+界面与设置的完整说明见[文档站](https://docs.bluearchive.cafe/cafe-launcher/)。
+
 ## 更新、卸载与数据
 
-Cafe Launcher 默认在启动后检查所选更新频道，也可以在“设置 → 关于”手动检查。当前更新流程会打开浏览器下载匹配平台的发行文件，安装仍由用户确认完成。
+Cafe Launcher 默认在启动后检查所选更新通道，也可以在“设置 → 关于”手动检查。当前更新流程会打开浏览器下载匹配平台的发行文件，安装仍由用户确认完成。
 
 Windows 安装版可从“设置 → 应用”卸载；便携版删除解压目录即可。卸载启动器不会自动删除游戏目录。设置、下载状态和诊断日志默认保存在 `%LOCALAPPDATA%\Cafe Launcher`，详细保留规则见[卸载与数据](https://docs.bluearchive.cafe/cafe-launcher/uninstall)。
 
@@ -85,7 +101,7 @@ Windows 安装版可从“设置 → 应用”卸载；便携版删除解压目�
 请先查看[常见问题](https://docs.bluearchive.cafe/cafe-launcher/faq)。仍无法解决时：
 
 1. 在“设置 → 关于”记录版本和构建信息。
-2. 在“设置 → 高级”导出日志 ZIP。
+2. 在“设置 → 高级”打开“导出日志”，按需选择时间范围和包含内容后导出 ZIP。
 3. 前往[源码仓库 Issues](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/issues)提交复现步骤、截图和日志。
 
 请勿在本 Release 仓库重复提交开发问题。
