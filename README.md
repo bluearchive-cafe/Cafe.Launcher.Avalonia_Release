@@ -13,6 +13,9 @@
 > [!IMPORTANT]
 > Cafe Launcher 是面向 Blue Archive 日服的社区第三方启动器，与 Nexon、Nexon Games、Yostar 及 Blue Archive 官方无隶属或合作关系。请只从本仓库或源码仓库的 Releases 页面下载安装包。
 
+> [!WARNING]
+> 由于开发者个人原因，项目无限期停止更新。
+
 ![Cafe Launcher 主视觉](./assets/images/key-visual.webp)
 
 ## 选择下载文件
