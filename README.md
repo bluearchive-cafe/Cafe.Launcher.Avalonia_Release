@@ -15,6 +15,16 @@
 
 ![Cafe Launcher 主视觉](./assets/images/key-visual.webp)
 
+## 目录
+
+- [选择下载文件](#选择下载文件)
+- [安装](#安装)
+- [第一次使用](#第一次使用)
+- [界面预览](#界面预览)
+- [更新、卸载与数据](#更新卸载与数据)
+- [遇到问题](#遇到问题)
+- [许可与声明](#许可与声明)
+
 ## 选择下载文件
 
 打开 [Releases](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia_Release/releases)，进入最新版本后按平台选择资产：
@@ -25,12 +35,13 @@
 | Windows x64 | `Cafe.Launcher.Avalonia_v*_win-x64.zip` | 解压即用的便携版 | 正式支持 |
 | macOS Apple Silicon | `Cafe.Launcher.Avalonia_v*_osx-arm64.zip` | 内含 `Cafe Launcher.app` | 实验性 |
 | Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.deb` | Debian、Ubuntu 等发行版 | 实验性 |
+| Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.rpm` | Fedora、openSUSE 等 RPM 系发行版 | 实验性 |
 | Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.AppImage` | 免安装运行 | 实验性 |
 | Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.tar.gz` | 手动解压部署 | 实验性 |
 
 文件名中的 `v*` 代表具体版本号。带有 `beta` 的版本属于测试频道；希望获得更稳定体验时，请选择标记为 Latest 且不带预发布标签的版本。
 
-所有发行包均为自包含应用，无需另外安装 .NET Runtime。macOS 与 Linux 版本仍处于实验阶段，功能完整度、系统集成和兼容性可能与 Windows 不同。
+所有发行包均为自包含应用，无需另外安装 .NET Runtime。macOS 与 Linux 版本仍处于实验阶段，功能完整度、系统集成和兼容性可能与 Windows 不同。macOS 目前只能安装、更新和修复游戏，暂不支持启动游戏；Linux 可通过 Wine、UMU 或 Proton 启动游戏，详见[常见问题](https://docs.bluearchive.cafe/cafe-launcher/faq)。
 
 ## 安装
 
@@ -47,21 +58,24 @@
 
 1. 下载 `win-x64.zip` 并完整解压。
 2. 运行 `Cafe.Launcher.Avalonia.exe`。
-3. 更新时可直接使用应用内的“重启以更新”自动替换目录；也可退出程序后手动用新版本覆盖原便携目录。
+3. 更新时可直接使用应用内的「重启以更新」自动替换目录；也可退出程序后手动用新版本覆盖原便携目录。
 
 不要直接在 ZIP 预览窗口中运行程序。便携版仍会将设置和日志写入 `%LOCALAPPDATA%\Cafe Launcher`。
 
 ### macOS
 
-解压 `osx-arm64.zip`，将 `Cafe Launcher.app` 移入“应用程序”后运行。该构建只面向 Apple Silicon Mac，Intel Mac 不在当前发行目标内。
+解压 `osx-arm64.zip`，将 `Cafe Launcher.app` 移入「应用程序」后运行。该构建只面向 Apple Silicon Mac，Intel Mac 不在当前发行目标内。
 
 ### Linux
 
 - `.deb`：适合 Debian、Ubuntu 及其衍生发行版，可通过系统包管理工具安装。
+- `.rpm`：适合 Fedora、openSUSE 等 RPM 系发行版，可通过系统包管理工具安装。
 - AppImage：赋予执行权限后直接运行。
 - `tar.gz`：解压后运行其中的 `Cafe.Launcher.Avalonia`。
 
 Linux 桌面仍需系统提供 Avalonia 所依赖的图形、字体和基础运行库。缺少库时，请参考发行版的软件包管理器提示和[安装文档](https://docs.bluearchive.cafe/cafe-launcher/installation)。
+
+在 Linux 上启动游戏前，请在「设置 → 游戏 → 兼容运行环境」中选择运行方式（自动 / UMU / Proton / Wine）。整条启动链路（含 XIGNCODE3 反作弊）已在 Arch Linux + UMU 1.4.4 + UMU-Proton 10.0-4 + NTFS3 游戏目录这一组合上实机验证；其他组合尚未验证，不保证可玩。
 
 ## 第一次使用
 
@@ -73,7 +87,7 @@ Linux 桌面仍需系统提供 Avalonia 所依赖的图形、字体和基础运�
 4. 代理
 5. 确认您的设置
 
-在“确认您的设置”一步可以单独“修改”前四项，确认后点击“完成”应用。完成后，主界面会识别已有游戏或显示“安装游戏”。如果电脑中已经存在官方启动器下载的游戏，请选择同一个 `BlueArchive_JP` 游戏目录，以避免重复下载。
+在「确认您的设置」一步可以单独「修改」前四项，确认后点击「完成」应用。完成后，主界面会识别已有游戏或显示「安装游戏」。如果电脑中已经存在官方启动器下载的游戏，请选择同一个 `BlueArchive_JP` 游戏目录，以避免重复下载。
 
 详细说明见[安装与首次使用](https://docs.bluearchive.cafe/cafe-launcher/installation)和[游戏操作](https://docs.bluearchive.cafe/cafe-launcher/operations)。
 
@@ -99,18 +113,18 @@ Windows 安装程序支持 English、简体中文和日本語，可自定义安�
 
 ## 更新、卸载与数据
 
-Cafe Launcher 默认在启动后检查所选更新通道（稳定版 / 测试版在“设置 → 常规 → 更新”中切换），也可以在“设置 → 关于”手动检查更新。
+Cafe Launcher 默认在启动后检查所选更新通道（稳定版 / 测试版在「设置 → 常规 → 更新」中切换），也可以在「设置 → 关于」手动检查更新。
 
-在 Windows 上，自更新在应用内完成：在“发现新版本”对话框中可先查看该版本的更新内容，再下载并点击“重启以更新”——更新包经发布附带的 `SHA256SUMS` 校验后，由独立的更新助手在启动器退出后替换安装并重新启动。校验信息或所需资产缺失时会回退为打开浏览器下载页，**不会运行未经校验的文件**。macOS 与 Linux 上仍为“前往发布页”。
+在 Windows 上，自更新在应用内完成：在「发现新版本」对话框中可先查看该版本的更新内容，再下载并点击「重启以更新」——更新包经发布附带的 `SHA256SUMS` 校验后，由独立的更新助手在启动器退出后替换安装并重新启动。校验信息或所需资产缺失时会回退为打开浏览器下载页，**不会运行未经校验的文件**。macOS 与 Linux 上仍为「前往发布页」。
 
-Windows 安装版可从 Windows“设置 → 应用”或开始菜单的“Uninstall Cafe Launcher”卸载；便携版删除解压目录即可。卸载启动器不会自动删除游戏目录。设置、下载状态和诊断日志默认保存在 `%LOCALAPPDATA%\Cafe Launcher`，详细保留规则见[卸载与数据](https://docs.bluearchive.cafe/cafe-launcher/uninstall)。
+Windows 安装版可从 Windows「设置 → 应用」或开始菜单的「Uninstall Cafe Launcher」卸载；便携版删除解压目录即可。卸载启动器不会自动删除游戏目录。设置、下载状态和诊断日志默认保存在 `%LOCALAPPDATA%\Cafe Launcher`，详细保留规则见[卸载与数据](https://docs.bluearchive.cafe/cafe-launcher/uninstall)。
 
 ## 遇到问题
 
 请先查看[常见问题](https://docs.bluearchive.cafe/cafe-launcher/faq)。仍无法解决时：
 
-1. 在“设置 → 关于”记录版本和构建信息。
-2. 在“设置 → 高级”打开“导出日志”，按需选择时间范围和包含内容后导出 ZIP。
+1. 在「设置 → 关于」记录版本和构建信息。
+2. 在「设置 → 高级」打开「导出日志」，按需选择时间范围和包含内容后导出 ZIP。
 3. 前往[源码仓库 Issues](https://github.com/bluearchive-cafe/Cafe.Launcher.Avalonia/issues)提交复现步骤、截图和日志。
 
 请勿在本 Release 仓库重复提交开发问题。
