@@ -31,15 +31,16 @@
 
 | 平台 | 文件名 | 建议用途 | 支持状态 |
 | --- | --- | --- | --- |
-| Windows x64 | `Cafe.Launcher.Avalonia_v*_setup.exe` | 带卸载入口和快捷方式的标准安装 | 正式支持 |
-| Windows x64 | `Cafe.Launcher.Avalonia_v*_win-x64.zip` | 解压即用的便携版 | 正式支持 |
-| macOS Apple Silicon | `Cafe.Launcher.Avalonia_v*_osx-arm64.zip` | 内含 `Cafe Launcher.app` | 实验性 |
-| Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.deb` | Debian、Ubuntu 等发行版 | 实验性 |
-| Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.rpm` | Fedora、openSUSE 等 RPM 系发行版 | 实验性 |
-| Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.AppImage` | 免安装运行 | 实验性 |
-| Linux x64 | `Cafe.Launcher.Avalonia_v*_linux-x64.tar.gz` | 手动解压部署 | 实验性 |
+| Windows x64 | `Cafe.Launcher_v*_setup.exe` | 带卸载入口和快捷方式的标准安装 | 正式支持 |
+| Windows x64 | `Cafe.Launcher_v*_win-x64.zip` | 解压即用的便携版 | 正式支持 |
+| macOS Apple Silicon | `Cafe.Launcher_v*_osx-arm64.zip` | 内含 `Cafe Launcher.app` | 实验性 |
+| Linux x64 | `Cafe.Launcher_v*_linux-x64.deb` | Debian、Ubuntu 等发行版 | 实验性 |
+| Linux x64 | `Cafe.Launcher_v*_linux-x64.rpm` | Fedora、openSUSE 等 RPM 系发行版 | 实验性 |
+| Linux x64 | `Cafe.Launcher_v*_linux-x64.pkg.tar.zst` | Arch Linux 安装包 | 实验性 |
+| Linux x64 | `Cafe.Launcher_v*_linux-x64.AppImage` | 免安装运行 | 实验性 |
+| Linux x64 | `Cafe.Launcher_v*_linux-x64.tar.gz` | 手动解压部署 | 实验性 |
 
-文件名中的 `v*` 代表具体版本号。带有 `beta` 的版本属于测试频道；希望获得更稳定体验时，请选择标记为 Latest 且不带预发布标签的版本。
+文件名中的 `v*` 代表具体版本号。带有 `beta` 的版本属于测试频道；希望获得更稳定体验时，请选择标记为 Latest 且不带预发布标签的版本。每个版本同时提供 `SHA256SUMS`，可在下载后核对文件完整性。
 
 所有发行包均为自包含应用，无需另外安装 .NET Runtime。macOS 与 Linux 版本仍处于实验阶段，功能完整度、系统集成和兼容性可能与 Windows 不同。macOS 目前只能安装、更新和修复游戏，暂不支持启动游戏；Linux 可通过 Wine、UMU 或 Proton 启动游戏，详见[常见问题](https://docs.bluearchive.cafe/cafe-launcher/faq)。
 
@@ -57,7 +58,7 @@
 ### Windows 便携版
 
 1. 下载 `win-x64.zip` 并完整解压。
-2. 运行 `Cafe.Launcher.Avalonia.exe`。
+2. 运行 `Cafe.Launcher.exe`。
 3. 更新时可直接使用应用内的「重启以更新」自动替换目录；也可退出程序后手动用新版本覆盖原便携目录。
 
 不要直接在 ZIP 预览窗口中运行程序。便携版仍会将设置和日志写入 `%LOCALAPPDATA%\Cafe Launcher`。
@@ -70,8 +71,9 @@
 
 - `.deb`：适合 Debian、Ubuntu 及其衍生发行版，可通过系统包管理工具安装。
 - `.rpm`：适合 Fedora、openSUSE 等 RPM 系发行版，可通过系统包管理工具安装。
+- `.pkg.tar.zst`：Arch Linux 安装包，使用 `sudo pacman -U ./Cafe.Launcher_v<版本>_linux-x64.pkg.tar.zst` 安装。
 - AppImage：赋予执行权限后直接运行。
-- `tar.gz`：解压后运行其中的 `Cafe.Launcher.Avalonia`。
+- `tar.gz`：解压后运行其中的 `Cafe.Launcher`。
 
 Linux 桌面仍需系统提供 Avalonia 所依赖的图形、字体和基础运行库。缺少库时，请参考发行版的软件包管理器提示和[安装文档](https://docs.bluearchive.cafe/cafe-launcher/installation)。
 
@@ -93,7 +95,7 @@ Linux 桌面仍需系统提供 Avalonia 所依赖的图形、字体和基础运�
 
 ## 界面预览
 
-主界面在识别到已有游戏后直接给出启动入口，底部状态栏汇总版本、下载源、启动校验与网络状态；游戏启动后还会额外显示会话状态行（启动中 / 游戏运行中 / 游戏已退出）。
+主界面在识别到已有游戏后直接给出启动入口，底部状态行依次显示游戏会话状态、启动校验、网络、下载源和版本；尚未启动游戏时隐藏会话项。
 
 ![Cafe Launcher 主界面](./assets/images/screenshot.png)
 
